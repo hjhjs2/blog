@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+
+/* CSS Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Start */
+
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    width:100%;
+    height:100;
+}
+.split {
+    height:100%;
+    width:50%;
+    position:fixed;
+    z-index:1;
+    top:0;
+    overflow-x:hidden;
+    padding-top:20px;
+}
+.left {
+    left:0;
+    background-color:#fffbce;
+}
+.right {
+    right:0;
+    background-color:white;
+}
+.centered {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    text-align:center;
+}
+.button-wrapper {
+    display:inline-block;
+    position:absolute;
+    z-index:500;
+    top:102%;
+    left:-4%;
+    padding:20px;
+    opacity:0.7;
+}
+.button {
+    background:#fff;
+    border:none;
+    padding:2px;
+    cursor:pointer;
+    display:block;
+    position:relative;
+    overflow:hidden;
+    transition:all .35s ease-in-out .35s;
+    margin:0 auto;
+    width:150px;
+    text-align:center;
+}
+.button a {
+    display:block;
+    padding:15px 30px;
+    font-family:'Fjalla One', sans-serif;
+    letter-spacing:8px;
+    color:#2d2d2d;
+    background:#fff;
+    z-index:100;
+    position:relative;
+    font-size:15px;
+    text-decoration:none;
+    letter-spacing:5px;
+    transition:all .35s ease-in-out .35s;
+}
+.button:hover a {
+    background:#ffae63;
+    color:#fff;
+    transition:all .35s ease-in-out .35s;
+}
+.button:after {
+    bottom:-100%;
+    right:-100%;
+    content:'';
+    width:100%;
+    height:100%;
+    position:absolute;
+    background:#ffae63;
+    transition:all .35s ease-in-out .5s;
+}
+.button:hover:after {
+    right:0;
+    bottom:0;
+    transition:all ease-in-out .35s;
+}
+.button:before {
+    top:-100%;
+    left:-100%;
+    content:"";
+    width:100%;
+    height:100%;
+    position:absolute;
+    background:#ffae63;
+    transition:all .35s ease-in-out .5s;
+}
+.button:hover:before {
+    left:0;
+    top:0;
+    transition:all ease-in-out .35s;
+}
+.gallery {
+    width:800px;
+}
+.view {
+    overflow:hidden;
+    position:relative;
+    width:500px;
+    height:330px;
+}
+.view-container {
+    overflow:hidden;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+.view-container:after {
+    content:'';
+    display:block;
+    position:relative;
+    clear:both;
+}
+.view-item {
+    position:relative;
+    float:left;
+    width:100%;
+}
+.view-item img {
+    display:block;
+    width:70%;
+}
+.view-item img:hover {
+    transform:scale(1.05);
+    transition:all 0.8s ease;
+}
+ul {
+    list-style-type:none;
+}
+.list {
+    width:600px;
+    padding:30px 0;
+}
+.list li {
+    display:inline-block;
+    width:150px;
+    vertical-align:top;
+    padding-bottom:15px;
+    padding-left:12px;
+}
+.list li a {
+    display:block;
+    position:relative;
+}
+.list li.selected a {
+    cursor:default;
+}
+.list li.selected a:after {
+    content:'';
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border:7px solid #fffbce;
+    box-sizing:border-box;
+}
+.list li.selected a:hover {
+    filter:grayscale(100%);
+    transition:all 0.8s ease;
+}
+.list li img {
+    display:block;
+    width:100%;
+}
+.list li img:hover {
+    filter:grayscale(100%);
+    transition:all 0.8s ease;
+}

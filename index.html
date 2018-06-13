@@ -1,10 +1,88 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>블로그 테스트</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>HOME - PIECE OF CHEEZE</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
 </head>
 <body>
-    <h1>블로그 테스트</h1>
+    <header>
+        <nav>
+            <a class="logo" href="./index.html">PIECE OF <span>CHEEZE</span></a>
+            <form>
+                <input type="radio" name="tab" id="menu"/>
+                <div class="container">
+                    <input type="radio" name="tab" checked="checked" id="home"/>
+                    <section class="home">
+                        <p id='typing1'></p>
+                        <p id='typing2'></p>
+                        <label for="home"></label>
+                    </section>
+                    <input type="radio" name="tab" id="profile"/>
+                    <section class="profile">
+                        <p id='typing3'></p>
+                        <p id='typing4'></p>
+                        <div class="button-wrapper">
+                            <div class="button">
+                                <a href="./profile.html">MORE</a>
+                            </div>  
+                        </div>
+                        <label for="profile"></label>
+                    </section>
+                    <input type="radio" name="tab" id="music"/>
+                    <section class="music">
+                        <p id='typing5'></p>
+                        <p id='typing6'></p>
+                        <div class="button-wrapper">
+                            <div class="button">
+                                <a href="#">MORE</a>
+                            </div>  
+                        </div>
+                        <label for="music"></label>
+                    </section>
+                    <input type="radio" name="tab" id="gallery"/>
+                    <section class="gallery">
+                        <p id='typing7'></p>
+                        <p id='typing8'></p>
+                        <div class="button-wrapper">
+                            <div class="button">
+                                <a href="./gallery.html">MORE</a>
+                            </div>  
+                        </div>
+                        <label for="gallery"></label>
+                    </section>
+                    <input type="radio" name="tab" id="video"/>
+                    <section class="video">
+                        <p id='typing9'></p>
+                        <p id='typing10'></p>
+                        <div class="button-wrapper">
+                            <div class="button">
+                                <a href="#">MORE</a>
+                            </div>  
+                        </div>
+                        <label for="video"></label>
+                    </section>
+                </div>
+                <div class="menu">
+                    <div>
+                        <label for="menu"></label>
+                        <label for="home"></label>
+                    </div>
+                </div>
+            </form>
+        </nav>
+    </header>
+    <footer>
+        <ul id="footer">
+            <li><a href="https://www.facebook.com/cheezeofficial/?fref=ts" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/CHEEZEofficial" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/cheeze__official" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </footer>
+    <script type="text/javascript" src="./js/script.js"></script>
 </body>
 </html>
