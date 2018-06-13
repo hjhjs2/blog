@@ -36,89 +36,141 @@ var g = 0;
 var h = 0;
 var i = 0;
 var j = 0;
+var duration1 = 200;
+var duration2 = 100;
 
 
 // 메인 화면에서 실행
-setInterval(function(){
+var homeMainTyping = function () {
       if (a < str1.length) {
           mainTyping1.append(str1[a]);
           a++;
+      } else {
+          clearInterval(startHomeMainTyping);
       }
-}, 200);
-setInterval(function(){
-    if (b < str2.length) {
-        subTyping1.append(str2[b]);
-        b++;
-    }
-}, 100);
+      // console.log('homeMainTyping');
+};
+var startHomeMainTyping = setInterval(homeMainTyping, duration1);
+
+var homeSubTyping = function () {
+      if (b < str2.length) {
+          subTyping1.append(str2[b]);
+          b++;
+      } else {
+          clearInterval(startHomeSubTyping);
+      }
+      // console.log('homeSubTyping');
+};
+var startHomeSubTyping = setInterval(homeSubTyping, duration2);
+
 
 // PROFILE 메뉴 클릭 시 실행
 function onClickProfileMenu() {
-    var testInterval = setInterval(function(){
+    var profileMainTyping = function () {
         if (c < str3.length) {
             mainTyping2.append(str3[c]);
             c++;
+        } else {
+            clearInterval(startProfileMainTyping);
         }
-    }, 200);
-    var testInterval2 = setInterval(function(){
-      if (d < str4.length) {
-          subTyping2.append(str4[d]);
-          d++;
-      }
-    }, 100);
+        // console.log('profileMainTyping');
+    };
+    var startProfileMainTyping = setInterval(profileMainTyping, duration1);
+
+    var profileSubTyping = function () {
+        if (d < str4.length) {
+            subTyping2.append(str4[d]);
+            d++;
+        } else {
+            clearInterval(startProfileSubTyping);
+        }
+        // console.log('profileSubTyping');
+    };
+    var startProfileSubTyping = setInterval(profileSubTyping, duration2);
 }
 profileMenu.addEventListener('click', onClickProfileMenu);
 
+
 // MUSIC 메뉴 클릭 시 실행
 function onClickMusicMenu() {
-    setInterval(function(){
+    var musicMainTyping = function () {
         if (e < str5.length) {
             mainTyping3.append(str5[e]);
             e++;
+        } else {
+            clearInterval(startMusicMainTyping);
         }
-    }, 200);
-    setInterval(function(){
-      if (f < str6.length) {
-          subTyping3.append(str6[f]);
-          f++;
-      }
-    }, 100);   
+        // console.log('musicMainTyping');
+    };
+    var startMusicMainTyping = setInterval(musicMainTyping, duration1);
+
+    var musicSubTyping = function () {
+        if (f < str6.length) {
+            subTyping3.append(str6[f]);
+            f++;
+        } else {
+            clearInterval(startMusicSubTyping);
+        }
+        // console.log('musicSubTyping');
+    };
+    var startMusicSubTyping = setInterval(musicSubTyping, duration2);   
 }
 musicMenu.addEventListener('click', onClickMusicMenu);
 
+
 // GALLERY 메뉴 클릭 시 실행
 function onClickGalleryMenu() {
-    setInterval(function(){
+    var galleryMainTyping = function () {
         if (g < str7.length) {
             mainTyping4.append(str7[g]);
             g++;
+        } else {
+            clearInterval(startGalleryMainTyping);
         }
-    }, 200);
-    setInterval(function(){
-      if (h < str8.length) {
-          subTyping4.append(str8[h]);
-          h++;
-      }
-    }, 100);   
+        // console.log('galleryMainTyping');
+    };
+    var startGalleryMainTyping = setInterval(galleryMainTyping, duration1);
+
+    var gallerySubTyping = function () {
+        if (h < str8.length) {
+            subTyping4.append(str8[h]);
+            h++;
+        } else {
+            clearInterval(startGallerySubTyping);
+        }
+        // console.log('gallerySubTyping');
+    };
+    var startGallerySubTyping = setInterval(gallerySubTyping, duration2);
 }
 galleryMenu.addEventListener('click', onClickGalleryMenu);
 
+
 // VIDEO 메뉴 클릭 시 실행
 function onClickVideoMenu() {
-    setInterval(function(){
+    var videoMainTyping = function () {
         if (i < str9.length) {
             mainTyping5.append(str9[i]);
             i++;
+        } else {
+            clearInterval(startVideoMainTyping);
         }
-    }, 200);
-    setInterval(function(){
-      if (j < str10.length) {
-          subTyping5.append(str10[j]);
-          j++;
-      }
-    }, 100);   
+        // console.log('videoMainTyping');
+    };
+    var startVideoMainTyping = setInterval(videoMainTyping, duration1);
+
+    var videoSubTyping = function () {
+        if (j < str10.length) {
+            subTyping5.append(str10[j]);
+            j++;
+        } else {
+            clearInterval(startVideoSubTyping);
+        }
+        // console.log('videoSubTyping');
+    };
+    var startVideoSubTyping = setInterval(videoSubTyping, duration2);  
 }
 videoMenu.addEventListener('click', onClickVideoMenu);
+
 
 // 페이지 로드 시 실행
 window.addEventListener('load', function() {
