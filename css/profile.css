@@ -65,49 +65,11 @@ body {
     font-family:'Fjalla One', sans-serif;
     font-family:'Nanum Gothic', sans-serif;
 }
-
-.split {
-    height:100%;
-    width:50%;
-    position:fixed;
-    z-index:1;
-    top:0;
-    overflow-x:hidden;
-}
-.left {
-    width:70%;
-    height:100%;
-    position:absolute;
-    z-index:-9999;
-    left:0;
-    background:url("../img/LongDream_2.jpg") no-repeat fixed;
-    -ms-overflow-style:none;
-}
-.right {
-    right:0;
-    -ms-overflow-style:none;
-}
-::-webkit-scrollbar { 
-    display:none; 
-}
-.centered1 {
-    position:absolute;
-    top:22%;
-    left:24%;
-    transform:translateX(-50%);
-    text-align:center;
-}
-.centered2 {
-    position:absolute;
-    top:10%;
-    left:0%;
-    text-align:center;
-}
 .button-wrapper {
     display:inline-block;
     position:absolute;
     z-index:500;
-    top:73%;
+    top:74%;
     left:2%;
     padding:20px;
     opacity:0.7;
@@ -173,6 +135,43 @@ body {
     left:0;
     top:0;
     transition:all ease-in-out .35s;
+}
+.split {
+    height:100%;
+    width:50%;
+    position:fixed;
+    z-index:1;
+    top:0;
+    overflow-x:hidden;
+}
+.left {
+    width:70%;
+    height:100%;
+    position:absolute;
+    z-index:-9999;
+    left:0;
+    background:url("../img/LongDream_2.jpg") no-repeat fixed;
+    -ms-overflow-style:none;
+}
+.right {
+    right:0;
+    -ms-overflow-style:none;
+}
+::-webkit-scrollbar { 
+    display:none; 
+}
+.centered1 {
+    position:absolute;
+    top:22%;
+    left:24%;
+    transform:translateX(-50%);
+    text-align:center;
+}
+.centered2 {
+    position:absolute;
+    top:10%;
+    left:0%;
+    text-align:center;
 }
 a {
     text-decoration:none;
@@ -315,6 +314,9 @@ ul {
     filter:grayscale(100%);
     transition:all 0.8s ease;
 }
+.tab-container2 .tab-content2 {
+    width:400px;
+}
 .tab-container2 .tab-content2 p {
     color:white;
     font-family:'Fjalla One', sans-serif;
@@ -322,12 +324,6 @@ ul {
     font-weight:bold;
     letter-spacing:15px;
     opacity:0.8;
-}
-.tab-container2 .tab-content2:nth-child(2) p {
-    margin-left:240px;
-}
-.tab-container2 .tab-content2:nth-child(3) p {
-    margin-left:30px;
 }
 .tab-container2 .tab-content2 p.explain {
     width:340px;
