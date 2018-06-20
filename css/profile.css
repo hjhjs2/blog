@@ -1,59 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
 
-/* CSS Reset */
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-
 /* Start */
-
 * {
     margin:0;
     padding:0;
@@ -63,80 +11,9 @@ body {
     height:100%;
     background-color:white;
     font-family:'Fjalla One', sans-serif;
-    font-family:'Nanum Gothic', sans-serif;
 }
-.button-wrapper {
-    display:inline-block;
-    position:absolute;
-    z-index:500;
-    top:74%;
-    left:2%;
-    padding:20px;
-    padding-bottom:100px;
-    opacity:0.7;
-}
-.button {
-    background:#fff;
-    border:none;
-    padding:2px;
-    cursor:pointer;
-    display:block;
-    position:relative;
-    overflow:hidden;
-    transition:all .35s ease-in-out .35s;
-    margin:0 auto;
-    width:150px;
-    text-align:center;
-}
-.button a {
-    display:block;
-    padding:15px 30px;
-    font-family:'Fjalla One', sans-serif;
-    letter-spacing:8px;
-    color:#2d2d2d;
-    background:#fff;
-    z-index:100;
-    position:relative;
-    font-size:15px;
-    text-decoration:none;
-    letter-spacing:5px;
-    transition:all .35s ease-in-out .35s;
-}
-.button:hover a {
-    background:#ffae63;
-    color:#fff;
-    transition:all .35s ease-in-out .35s;
-}
-.button:after {
-    bottom:-100%;
-    right:-100%;
-    content:'';
-    width:100%;
-    height:100%;
-    position:absolute;
-    background:#ffae63;
-    transition:all .35s ease-in-out .5s;
-}
-.button:hover:after {
-    right:0;
-    bottom:0;
-    transition:all ease-in-out .35s;
-}
-.button:before {
-    top:-100%;
-    left:-100%;
-    content:"";
-    width:100%;
-    height:100%;
-    position:absolute;
-    background:#ffae63;
-    transition:all .35s ease-in-out .5s;
-}
-.button:hover:before {
-    left:0;
-    top:0;
-    transition:all ease-in-out .35s;
-}
+
+/* Contents Area */
 .split {
     height:100%;
     width:50%;
@@ -151,7 +28,8 @@ body {
     position:absolute;
     z-index:-9999;
     left:0;
-    background:url("../img/LongDream_2.jpg") no-repeat fixed;
+    background:url("../img/cheeze2_.jpg") no-repeat center center fixed;
+    background-size:cover;
     -ms-overflow-style:none;
 }
 .right {
@@ -161,13 +39,8 @@ body {
 ::-webkit-scrollbar { 
     display:none; 
 }
-.centered1 {
-    position:absolute;
-    top:22%;
-    left:24%;
-    transform:translateX(-50%);
-    text-align:center;
-}
+
+/* Profile - Right */
 .centered2 {
     position:absolute;
     top:10%;
@@ -205,7 +78,7 @@ ul {
     display:block;
     width:100%;
     height:100%;
-    background-color:#ffc896;
+    background-color:#e0ecd4;
     font-family:'Fjalla One', sans-serif;
     text-align:center;
     color:#fff;
@@ -214,12 +87,12 @@ ul {
     padding-right:8px;
 }
 .tab-menu li a:hover {
-    background-color:#ffae63;
+    background-color:#d6e2ca;
     text-decoration:line-through;
     transition:all 1s ease;
 }
 .tab-menu li a.selected {
-    background-color:#ffae63;
+    background-color:#d6e2ca;
     text-decoration:line-through;
     cursor:default;
 }
@@ -227,7 +100,7 @@ ul {
     width:550px;
     height:400px;
     position:relative;
-    border:7px solid #ffae63;
+    border:7px solid #d6e2ca;
     background-color:white;
     box-sizing:border-box;
 }
@@ -250,7 +123,7 @@ ul {
 }
 .tab-container .tab-content span:first-child {
     display:inline-block;
-    color:#ffae63;
+    color:#ccd6c2;
     font-weight:bold;
     padding-right:5px;
 }
@@ -277,17 +150,17 @@ ul {
     padding-right:10px;
 }
 .tab-container .tab-content:nth-child(2) ul li a {
-    color:#3f3f3f;
+    color:#646464;
 }
 .tab-container .tab-content:nth-child(2) ul li a:hover {
-    color:#ffae63;
+    color:#d6e2ca;
     transition:all 0.5s ease;
 }
 .tab-container .tab-content:last-child p {
     position:absolute;
     top:65px;
     left:40px;
-    color:#ffae63;
+    color:#ccd6c2;
     font-family:'Fjalla One', sans-serif;
     font-size:35px;
     line-height:50px;
@@ -315,6 +188,15 @@ ul {
     filter:grayscale(100%);
     transition:all 0.8s ease;
 }
+
+/* Profile - Left */
+.centered1 {
+    position:absolute;
+    top:22%;
+    left:24%;
+    transform:translateX(-50%);
+    text-align:center;
+}
 .tab-container2 .tab-content2 {
     width:400px;
 }
@@ -326,6 +208,14 @@ ul {
     letter-spacing:15px;
     opacity:0.8;
 }
+.tab-container2 .tab-content2 p.subject {
+    font-size:14px;
+    font-weight:normal;
+    text-align:justify;
+    line-height:20px;
+    letter-spacing:5px;
+    margin-top:80px;
+}
 .tab-container2 .tab-content2 p.explain {
     width:340px;
     font-size:12px;
@@ -333,7 +223,7 @@ ul {
     text-align:justify;
     line-height:20px;
     letter-spacing:5px;
-    margin-top:90px;
+    margin-top:80px;
     padding-bottom:70px;
 }
 .tab-container .tab-content, .tab-container2 .tab-content2 {
@@ -344,4 +234,53 @@ ul {
 }
 .tab-container .tab-content.selected, .tab-container2 .tab-content2.selected {
     display:block;
+}
+
+/* Close Button */
+.close {
+    display:block;
+    position:absolute;
+    z-index:200;
+    top:0;
+    right:0;
+    width:50px;
+    height:50px;
+    cursor:pointer;
+    background-color:#646464;
+}
+.close:hover {
+    background-color:#d6e2ca;
+    transition:all 0.5s ease;
+}
+.close span {
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width:25px;
+    height:25px;
+    margin:12.5px;
+}
+.close span:before,
+.close span:after {
+    content:'';
+    display:block;
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100%;
+    height:1px;
+    background-color:#fff;
+}
+.close span:before {
+    transform:translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.close span:after {
+    transform:translateX(-50%) translateY(-50%) rotate(135deg);
+}
+
+/* Animation */
+@keyframes name {
+    0% {opacity:0;}
+    50% {opacity:0.5;}
+    100% {opacity:0.8;}
 }

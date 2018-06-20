@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Q - PIECE OF CHEEZE</title>
+        <link rel="stylesheet" href="./css/reset.css"/>
+        <link rel="stylesheet" href="./css/q.css"/>
+        <link rel="shortcut icon" href="./img/cheezeFavicon.ico"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+    </head>
+    <body>
+        <!-- CD -->
+        <section>
+            <div class="split left">
+                <div class="centered">
+                    <img id="CD" src="./img/qCD.png" width="300" height="300" alt="CHEEZE ALBUM">
+                    <div id="trackName"></div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="split right">
+                <!-- Close Button -->
+                <b id="btn-close"><span>&nbsp;</span></b>
+                <!-- Track -->
+                <div class="center centered">
+                    <div id="albumName">Q</div>
+                    <table id="music">
+                        <tr>
+                            <th>01</th>
+                            <td><a id="track1" class="track" href="#">Mood Indigo</a></td>
+                            <audio id="music1">
+                                <source src="./assets/MoodIndigo.mp3" type="audio/mpeg">
+                            </audio>
+                            <td><button onclick="playAudio1()"><i class="far fa-play-circle"></i></button></td>
+                            <td><button onclick="pauseAudio1()"><i class="far fa-pause-circle"></i></button></td>
+                            <td><button onclick="stopAudio1()"><i class="far fa-stop-circle"></i></button></td>
+                        </tr>
+                        <tr>
+                            <th>02</th>
+                            <td><a id="track2" class="track" href="#">어떻게 생각해</a></td>
+                            <audio id="music2">
+                                <source src="./assets/HowDoYouThink.mp3" type="audio/mpeg">
+                            </audio>
+                            <td><button onclick="playAudio2()"><i class="far fa-play-circle"></i></button></td>
+                            <td><button onclick="pauseAudio2()"><i class="far fa-pause-circle"></i></button></td>
+                            <td><button onclick="stopAudio2()"><i class="far fa-stop-circle"></i></button></td>
+                        </tr>
+                        <tr>
+                            <th>03</th>
+                            <td><a id="track3" class="track" href="#">깊이 아래로</a></td>
+                            <audio id="music3">
+                                <source src="./assets/DeepDown.mp3" type="audio/mpeg">
+                            </audio>
+                            <td><button onclick="playAudio3()"><i class="far fa-play-circle"></i></button></td>
+                            <td><button onclick="pauseAudio3()"><i class="far fa-pause-circle"></i></button></td>
+                            <td><button onclick="stopAudio3()"><i class="far fa-stop-circle"></i></button></td>
+                        </tr>
+                        <tr>
+                            <th>04</th>
+                            <td><a id="track4" class="track" href="#">How Can I Do</a></td>
+                            <audio id="music4">
+                                <source src="./assets/HowCanIDo.mp3" type="audio/mpeg">
+                            </audio>
+                            <td><button onclick="playAudio4()"><i class="far fa-play-circle"></i></button></td>
+                            <td><button onclick="pauseAudio4()"><i class="far fa-pause-circle"></i></button></td>
+                            <td><button onclick="stopAudio4()"><i class="far fa-stop-circle"></i></button></td>
+                        </tr>
+                        <tr>
+                            <th>05</th>
+                            <td><a id="track5" class="track" href="#">새벽길</a></td>
+                            <audio id="music5">
+                                <source src="./assets/MidnightLoad.mp3" type="audio/mpeg">
+                            </audio>
+                            <td><button onclick="playAudio5()"><i class="far fa-play-circle"></i></button></td>
+                            <td><button onclick="pauseAudio5()"><i class="far fa-pause-circle"></i></button></td>
+                            <td><button onclick="stopAudio5()"><i class="far fa-stop-circle"></i></button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <!-- Script -->
+        <script type="text/javascript" src="./js/q.js"></script>
+    </body>
+</html> 

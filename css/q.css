@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
+
+/* Start */
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    width:100%;
+    height:100%;
+    font-family:'Fjalla One', sans-serif;
+    color:#fff;
+    letter-spacing:3px;
+    overflow:hidden;
+    background:url('../img/014.jpg') no-repeat left top;
+    background-size:cover;
+}
+
+/* Contents Area */
+.split {
+    height:100%;
+    width:100%;
+    position:fixed;
+    z-index:1;
+    top:0;
+    overflow-x:hidden;
+    padding-top:20px;
+}
+.left {
+    left:-25%;
+}
+.left .centered img {
+    width:300px;
+}
+.right {
+    right:-20%;
+}
+
+/* CD Area */
+.centered {
+    position:absolute;
+    top:55%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    text-align:center;
+}
+#trackName {
+    color:#fff;
+    font-family:'Nanum Gothic', sans-serif;
+    font-weight:bold;
+    font-size:15px;
+    margin-top:60px;
+}
+
+/* Track Area */
+.center {
+    top:57%;
+}
+#albumName {
+    position:absolute;
+    top:-40%;
+    font-size:40px;
+    cursor:pointer;
+}
+table {
+    width:500px;
+}
+table th, td {
+    text-align:left;
+    font-size:18px;
+}
+table th {
+    opacity:0.8;
+    font-weight:bold;
+}
+table td {
+    opacity:0.8;
+    line-height:50px;
+    padding-left:5px;
+}
+table td a {
+    color:#fff;
+    text-decoration:none;
+}
+table td a:hover {
+    opacity:0.5;
+    transition:all 0.5s ease;
+}
+table td a:visited {
+    color:#fff;
+}
+table td .far {
+    color:#fff;
+    font-size:25px;
+}
+table td .far:hover {
+    opacity:0.5;
+    transition:all 0.5s ease;
+}
+table td button {
+    cursor:pointer;
+    border:0;
+    background-color:Transparent;
+    width:15px;
+}
+table td button:focus {
+    outline:none;
+}
+.track.selected {
+    opacity:0.5;
+}
+
+/* Close Button */
+#btn-close {
+    display:block;
+    position:absolute;
+    z-index:200;
+    top:0;
+    right:20%;
+    width:50px;
+    height:50px;
+    cursor:pointer;
+    background-color:#2d2d2d;
+}
+#btn-close:hover {
+    background-color:#4fc0d2;
+    transition:all 0.5s ease;
+}
+#btn-close span {
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width:25px;
+    height:25px;
+    margin:12.5px;
+}
+#btn-close span:before,
+#btn-close span:after {
+    content:'';
+    display:block;
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100%;
+    height:1px;
+    background-color:#fff;
+}
+#btn-close span:before {
+    transform:translateX(-50%) translateY(-50%) rotate(45deg);
+}
+#btn-close span:after {
+    transform:translateX(-50%) translateY(-50%) rotate(135deg);
+}
+
+/* Animation */
+@keyframes spin1 {
+    0% {transform:rotate(0);}
+    100% {transform:rotate(360deg);}
+}
+@keyframes spin2 {
+    0% {transform:rotate(0);}
+    100% {transform:rotate(-360deg);}
+}
+@keyframes move {
+    0% {transform:translateX(-180%);}
+    100% {transform:translateX(0%);}
+}
+@keyframes nameMove {
+    0% {opacity:0;}
+    50% {opacity:0.5;}
+    100% {opacity:1;}
+}

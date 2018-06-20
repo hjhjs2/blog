@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+
+/* Start */
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    overflow-x:hidden;
+    position:relative;
+    width:100%;
+    color:#fff;
+    font-family:'Fjalla One', sans-serif;
+    font-size:12px;
+    line-height:18px;
+    letter-spacing:2px;
+}
+
+/* Contents Area */
+a {
+    text-decoration:none;
+}
+.accordion-menu {
+    width:800px;
+    height:450px;
+    margin:0 auto;
+    background-color:#ccc;
+}
+.accordion-menu:after {
+    content:'';
+    display:block;
+    position:relative;
+    clear:both;
+}
+.accordion-menu .menu-item {
+    position:relative;
+    float:left;
+    width:33.3%;
+    height:100%;
+    overflow:hidden;
+    transition:width 300ms ease-in-out;
+}
+.accordion-menu.resize .menu-item {
+    transition:none;
+}
+.accordion-menu .menu-item figure {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+.accordion-menu .menu-item figure img {
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.accordion-menu .menu-item a {
+    display:block;
+    position:absolute;
+    z-index:100;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:100%;
+    color:#fff;
+    text-transform:uppercase;
+    text-align:center;
+    font-size:50px;
+    line-height:30px;
+}
+.accordion-menu .menu-item a span {
+    display:inline-block;
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform:translateX(-50%);
+    vertical-align:top;
+    text-shadow:0 1px 1px rgba(0,0,0,0.15);
+}
+.accordion-menu .menu-item a span:before {
+    content:'';
+    display:block;
+    position:absolute;
+    bottom:-70%;
+    left:50%;
+    width:0;
+    height:0;
+    border-bottom:2px solid #fff;
+    transform:translateX(-50%);
+    transition:width 200ms ease-in-out;
+}
+.accordion-menu .menu-item a:hover span:before {
+    width:100%;
+}
+
+/* Album */
+.album {
+    display:none;
+}
+.num1 {
+    position:absolute;
+    z-index:500;
+    top:52%;
+    left:34%;
+    background-color:transparent;
+    border:0;
+}
+.num2 {
+    position:absolute;
+    z-index:500;
+    top:52%;
+    left:49%;
+    background-color:transparent;
+    border:0;
+}
+.num3 {
+    position:absolute;
+    z-index:500;
+    top:52%;
+    left:27%;
+    background-color:transparent;
+    border:0;
+}
+.num4 {
+    position:absolute;
+    z-index:500;
+    top:52%;
+    left:42%;
+    background-color:transparent;
+    border:0;
+}
+.num5 {
+    position:absolute;
+    z-index:500;
+    top:52%;
+    left:57%;
+    background-color:transparent;
+    border:0;
+}
+.album img {
+    opacity:0.8;
+}
+.album img:hover {
+    cursor:pointer;
+}
+#accordion-menu .selected .album {
+    display:block;
+    animation:name 0.8s ease-in;
+}
+#accordion-menu .selected .close {
+    display:none;
+}
+
+/* Contents - Close */
+.accordion-menu .menu-item b.btn-close {
+    display:none;
+    position:absolute;
+    z-index:200;
+    top:0;
+    right:0;
+    width:50px;
+    height:50px;
+    cursor:pointer;
+    background-color:#2d2d2d;
+}
+.accordion-menu .menu-item b#btn1:hover {
+    background-color:#e3ac0e;
+    transition:all 0.5s ease;
+}
+.accordion-menu .menu-item b#btn2:hover {
+    background-color:#dd8535;
+    transition:all 0.5s ease;
+}
+.accordion-menu .menu-item b#btn3:hover {
+    background-color:#994d6d;
+    transition:all 0.5s ease;
+}
+.accordion-menu .menu-item.selected b.btn-close {
+    display:block;
+}
+.accordion-menu .menu-item b.btn-close span {
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width:25px;
+    height:25px;
+    margin:12.5px;
+}
+.accordion-menu .menu-item b.btn-close span:before,
+.accordion-menu .menu-item b.btn-close span:after {
+    content:'';
+    display:block;
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100%;
+    height:1px;
+    background-color:#fff;
+}
+.accordion-menu .menu-item b.btn-close span:before {
+    transform:translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.accordion-menu .menu-item b.btn-close span:after {
+    transform:translateX(-50%) translateY(-50%) rotate(135deg);
+}
+
+/* Close Button */
+.close {
+    display:block;
+    position:absolute;
+    z-index:100;
+    top:0;
+    right:0;
+    width:50px;
+    height:50px;
+    cursor:pointer;
+    background-color:#2d2d2d;
+}
+.close:hover {
+    background-color:#994d6d;
+    transition:all 0.5s ease;
+}
+.close span {
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width:25px;
+    height:25px;
+    margin:12.5px;
+}
+.close span:before,
+.close span:after {
+    content:'';
+    display:block;
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100%;
+    height:1px;
+    background-color:#fff;
+}
+.close span:before {
+    transform:translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.close span:after {
+    transform:translateX(-50%) translateY(-50%) rotate(135deg);
+}
+
+/* Animation */
+@keyframes name {
+    0% {opacity:0;}
+    50% {opacity:0.5;}
+    100% {opacity:1;}
+}

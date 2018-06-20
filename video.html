@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>VIDEO - PIECE OF CHEEZE</title>
+        <link rel="stylesheet" href="./css/reset.css"/>
+        <link rel="stylesheet" href="./css/video.css"/>
+        <link rel="shortcut icon" href="./img/cheezeFavicon.ico"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+    </head>
+    <body>
+        <!-- Main Player -->
+        <section>
+            <div id="player"></div>
+        </section>
+        <!-- Playlist -->
+        <section>
+            <b id="btn-menu" class="btn-menu"><span><i class="fas fa-list-ul"></i></span></b>
+            <div id="side-menu" class="side-menu">
+                <ul id="list">
+                    <li class="selected">
+                        <a href="javascript:video('player', 'LsLUz7ArmGI');">
+                            <img src="./img/013_.jpg" width="80" height="50" alt="CHEEZE ALBUM">  
+                            <span>2016 / Mood Indigo</span>
+                            <div>Mood Indigo</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:video('player', 'Frs7j21R4Cc');">
+                            <img src="./img/014_.jpg" width="80" height="50" alt="CHEEZE ALBUM">  
+                            <span>2016 / Q</span>
+                            <div>어떻게 생각해</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:video('player', 'O136JYv3weQ');">
+                            <img src="./img/015_.jpg" width="80" height="50" alt="CHEEZE ALBUM">
+                            <span>2017 / 좋아해 (bye)</span> 
+                            <div>좋아해 (bye)</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:video('player', 'EbKHsEUAgHA');">
+                            <img src="./img/016_.jpg" width="80" height="50" alt="CHEEZE ALBUM">
+                            <span>2017 / Be There</span>
+                            <div>Be There</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:video('player', 'NRmLVpHmyg8');">
+                            <img src="./img/017_.jpg" width="80" height="50" alt="CHEEZE ALBUM">
+                            <span>2017 / Short Film #1</span>
+                            <div>다음에 또 만나요</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:video('player', '6fOJkhs0jIU');">
+                            <img src="./img/018.jpg" width="80" height="50" alt="CHEEZE ALBUM">
+                            <span>2018 / Short Film #2</span>
+                            <div>긴 꿈에서</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:video('player', 'sv1tcsVoHlw');">
+                            <img src="./img/019.jpg" width="80" height="50" alt="CHEEZE ALBUM">
+                            <span>2018 / Short Film #3</span>
+                            <div>거짓말처럼</div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Close Button -->
+                <b id="btn-close" class="btn-close"><span></span></b>
+            </div>
+        </section>
+        <!-- Close Button -->
+        <b class="close" onclick="goBack()"><span>&nbsp;</span></b>
+        <!-- Script -->
+        <script type="text/javascript" src="./js/video.js"></script>
+    </body>
+</html>

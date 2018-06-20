@@ -1,56 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <title>GALLERY - PIECE OF CHEEZE</title>
-    <link rel="stylesheet" href="./css/gallery.css">
-</head>
-<body>
-    <section>
-        <div id="gallery" class="gallery">
-            <section>
-                <div class="split left">
-                    <div class="centered">
-                        <div class="view">
-                            <div class="view-container">
-                                <div class="view-item"><img src="./img/1.jpg"></div>
-                                <div class="view-item"><img src="./img/2.jpg"></div>
-                                <div class="view-item"><img src="./img/3.jpg"></div>
-                                <div class="view-item"><img src="./img/4.jpg"></div>
-                                <div class="view-item"><img src="./img/5.jpg"></div>
-                                <div class="view-item"><img src="./img/6.jpg"></div>
-                                <div class="view-item"><img src="./img/7.jpg"></div>
-                                <div class="view-item"><img src="./img/8.jpg"></div>
-                                <div class="view-item"><img src="./img/9.jpg"></div>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <title>GALLERY - PIECE OF CHEEZE</title>
+        <link rel="stylesheet" href="./css/reset.css"/>
+        <link rel="stylesheet" href="./css/gallery.css"/>
+        <link rel="shortcut icon" href="./img/cheezeFavicon.ico"/>
+    </head>
+    <body>
+        <section>
+            <div id="gallery" class="gallery">
+                <!-- Left Photo -->
+                <section>
+                    <div class="split left">
+                        <div class="centered">
+                            <div class="view">
+                                <div class="view-container">
+                                    <div class="view-item"><img src="./img/1.jpg" alt="CHEEZE IMAGE"></div>
+                                    <div class="view-item"><img src="./img/2.jpg" alt="CHEEZE IMAGE"></div>
+                                    <div class="view-item"><img src="./img/3.jpg" alt="CHEEZE IMAGE"></div>
+                                    <div class="view-item"><img src="./img/4.jpg" alt="CHEEZE IMAGE"></div>
+                                    <div class="view-item"><img src="./img/5.jpg" alt="CHEEZE IMAGE"></div>
+                                    <div class="view-item"><img src="./img/6.jpg" alt="CHEEZE IMAGE"></div>
+                                    <div class="view-item"><img src="./img/7.jpg" alt="CHEEZE IMAGE"></div>
+                                    <div class="view-item"><img src="./img/8.jpg" alt="CHEEZE IMAGE"></div>
+                                    <div class="view-item"><img src="./img/9.jpg" alt="CHEEZE IMAGE"></div>
+                                </div>
                             </div>
                         </div>
-                        <div class="button-wrapper">
-                            <div class="button">
-                                   <a class="back" href="#" onclick="goBack();">BACK</a>
-                            </div>  
+                    </div>
+                </section>
+                <!-- Right Photo List -->
+                <section>
+                    <div class="split right">
+                        <div class="centered">
+                            <ul class="list"><li class="selected"><a href="#"><img
+                            src="./img/1.jpg" alt="CHEEZE IMAGE"></a></li><li><a href="#"><img
+                            src="./img/2.jpg" alt="CHEEZE IMAGE"></a></li><li><a href="#"><img
+                            src="./img/3.jpg" alt="CHEEZE IMAGE"></a></li><li><a href="#"><img
+                            src="./img/4.jpg" alt="CHEEZE IMAGE"></a></li><li><a href="#"><img
+                            src="./img/5.jpg" alt="CHEEZE IMAGE"></a></li><li><a href="#"><img 
+                            src="./img/6.jpg" alt="CHEEZE IMAGE"></a></li><li><a href="#"><img
+                            src="./img/7.jpg" alt="CHEEZE IMAGE"></a></li><li><a href="#"><img
+                            src="./img/8.jpg" alt="CHEEZE IMAGE"></a></li><li><a href="#"><img
+                            src="./img/9.jpg" alt="CHEEZE IMAGE"></a></li></ul>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section>
-                <div class="split right">
-                    <div class="centered">
-                        <ul class="list"><li class="selected"><a href="#"><img
-                        src="./img/1.jpg"></a></li><li><a href="#"><img
-                        src="./img/2.jpg"></a></li><li><a href="#"><img
-                        src="./img/3.jpg"></a></li><li><a href="#"><img
-                        src="./img/4.jpg"></a></li><li><a href="#"><img
-                        src="./img/5.jpg"></a></li><li><a href="#"><img 
-                        src="./img/6.jpg"></a></li><li><a href="#"><img
-                        src="./img/7.jpg"></a></li><li><a href="#"><img
-                        src="./img/8.jpg"></a></li><li><a href="#"><img
-                        src="./img/9.jpg"></a></li></ul>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </section>
-    <script type="text/javascript" src="./js/gallery.js"></script>
-</body>
+                </section>
+                <!-- Close Button -->
+                <b class="close" onclick="goBack()"><span>&nbsp;</span></b>
+            </div>
+        </section>
+        <!-- Script -->
+        <script type="text/javascript" src="./js/gallery.js"></script>
+    </body>
 </html>

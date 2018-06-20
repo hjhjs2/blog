@@ -1,56 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 
-/* CSS Reset */
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-	  padding: 0;
-	  border: 0;
-	  font-size: 100%;
-	  font: inherit;
-	  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	  display: block;
-}
-body {
-	  line-height: 1;
-}
-ol, ul {
-	  list-style: none;
-}
-blockquote, q {
-	  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	  content: '';
-	  content: none;
-}
-table {
-	  border-collapse: collapse;
-	  border-spacing: 0;
-}
-
-
 /* Start */
 * {
     margin:0;
@@ -66,6 +15,8 @@ body {
     overflow:hidden;
     transform-style:preserve-3d;
 }
+
+/* Contents Area */
 input[type='radio'], .hide {
     display:none;
 }
@@ -107,6 +58,17 @@ input[type='radio']:checked + section {
     background:url("../img/cheeze5.jpg") no-repeat center center fixed;
     background-size:cover;
 }
+.container section h1 {
+    display:none;
+    margin:0;
+    font-size:60px;
+    transform:translate(0, 40vh);
+    text-align:center;
+    color:#fff;
+    opacity:0.7;
+    transition:transform 500ms;
+    transform-style:preserve-3d;
+}
 .container section label {
     display:block;
     position:absolute;
@@ -114,6 +76,8 @@ input[type='radio']:checked + section {
     width:100%;
     height:100vh;
 }
+
+/* Burger Menu */
 .menu {
     display:block;
     position:fixed;
@@ -126,7 +90,7 @@ input[type='radio']:checked + section {
     height:4px;
     background:rgba(0,0,0,0.25);
 }
-.menu:before, .menu::after {
+.menu:before, .menu:after {
     content:'';
     display:block;
     position:absolute;
@@ -161,6 +125,8 @@ input[type='radio']:checked + section {
 .menu div label:hover {
     cursor:pointer;
 }
+
+/* Burger Menu - Checked */
 #menu:checked + .container {
     transform:scale(0.65) translateY(-18%);
     transition:all 500ms;
@@ -174,29 +140,33 @@ input[type='radio']:checked + section {
     transform-style:preserve-3d;
 }
 #menu:checked + .container section h1 {
+    display:block;
     transform:scale(0.5);
     transform-style:preserve-3d;
 }
 #menu:checked + .container + .menu {
     top:40px;
     right:50px;
-    transform:rotate(225deg);
-    transition:all 200ms;
+    transform:rotate(45deg);
+    transition:all 180ms;
     transform-origin:center center;
     background:#646464;
 }
-#menu:checked + .container + .menu::before,
-#menu:checked + .container + .menu::after {
+#menu:checked + .container + .menu:before,
+#menu:checked + .container + .menu:after {
     background:#646464;
-    transition:all 200ms;
+    transition:all 180ms;
 }
-#menu:checked + .container + .menu::before {
+#menu:checked + .container + .menu:before {
     opacity:0;
     transition:opacity 0s;
 }
-#menu:checked + .container + .menu::after {
+#menu:checked + .container + .menu:after {
     margin-top:-20px;
     transform:rotate(90deg);
+}
+#menu:checked + .container + .menu div label:nth-child(1) {
+    display:none;
 }
 #menu:checked + .container + .menu div label:nth-child(2) {
     display:block;
@@ -205,9 +175,8 @@ input[type='radio']:checked + section {
     position:absolute;
     top:-6px;
 }
-#menu:checked + .container + .menu div label:nth-child(1) {
-    display:none;
-}
+
+/* Burger Menu - Menu Contents */
 .container section.home {
     z-index:99;
 }
@@ -252,4 +221,26 @@ input[type='radio']:checked + section {
 }
 #menu:checked + .container section.video:hover {
     top:8px;
+}
+
+/* Animation */
+@keyframes name {
+    0% {opacity:0;}
+    50% {opacity:0.5;}
+    100% {opacity:1;}
+}
+@keyframes name2 {
+    0% {opacity:0;}
+    50% {opacity:0.25;}
+    100% {opacity:0.5;}
+}
+@keyframes name3 {
+    0% {opacity:0;}
+    50% {opacity:0.4;}
+    100% {opacity:0.8;}
+}
+@keyframes name4 {
+    0% {opacity:0;}
+    50% {opacity:0.3;}
+    100% {opacity:0.7;}
 }

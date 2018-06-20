@@ -10,10 +10,15 @@ var mainTyping4 = document.getElementById('typing7');
 var subTyping4 = document.getElementById('typing8');
 var mainTyping5 = document.getElementById('typing9');
 var subTyping5 = document.getElementById('typing10');
+var homeMenu = document.getElementById('home');
 var profileMenu = document.getElementById('profile');
 var musicMenu = document.getElementById('music');
 var galleryMenu = document.getElementById('gallery');
 var videoMenu = document.getElementById('video');
+var profileBtn = document.getElementById('profileMore');
+var musicBtn = document.getElementById('musicMore');
+var galleryBtn = document.getElementById('galleryMore');
+var videoBtn = document.getElementById('videoMore');
 
 var str1 = "\" PIECE OF CHEEZE \"";
 var str2 = " 치즈 (CHEEZE) 의 계절은 아름답게 돌아오고, 즐거운 날은 조금 슬프게 지나간다. 그의 계절의 조각이 모여 하나의 작품이 완성된다."
@@ -40,32 +45,42 @@ var duration1 = 200;
 var duration2 = 100;
 
 
-// 메인 화면에서 실행
-var homeMainTyping = function () {
-      if (a < str1.length) {
-          mainTyping1.append(str1[a]);
-          a++;
-      } else {
-          clearInterval(startHomeMainTyping);
-      }
-      // console.log('homeMainTyping');
-};
-var startHomeMainTyping = setInterval(homeMainTyping, duration1);
+// 메인 화면에서 타이핑 실행
+function onHomeMenu() {
+    var homeMainTyping = function () {
+        if (a < str1.length) {
+            mainTyping1.append(str1[a]);
+            a++;
+        } else {
+            clearInterval(startHomeMainTyping);
+        }
+        // console.log('homeMainTyping');
+  };
+  var startHomeMainTyping = setInterval(homeMainTyping, duration1);
+  
+  var homeSubTyping = function () {
+        if (b < str2.length) {
+            subTyping1.append(str2[b]);
+            b++;
+        } else {
+            clearInterval(startHomeSubTyping);
+        }
+        // console.log('homeSubTyping');
+  };
+  var startHomeSubTyping = setInterval(homeSubTyping, duration2);
+}
 
-var homeSubTyping = function () {
-      if (b < str2.length) {
-          subTyping1.append(str2[b]);
-          b++;
-      } else {
-          clearInterval(startHomeSubTyping);
-      }
-      // console.log('homeSubTyping');
-};
-var startHomeSubTyping = setInterval(homeSubTyping, duration2);
+
+// Home 메뉴 클릭 시 애니메이션 실행
+function clickHomeMenu() {
+    mainTyping1.style.animation = 'name 2s ease-in-out';
+    subTyping1.style.animation = 'name 3s ease-in-out';
+}
+homeMenu.addEventListener('click', clickHomeMenu);
 
 
-// PROFILE 메뉴 클릭 시 실행
-function onClickProfileMenu() {
+// PROFILE 화면에서 타이핑 실행
+function onProfileMenu() {
     var profileMainTyping = function () {
         if (c < str3.length) {
             mainTyping2.append(str3[c]);
@@ -87,12 +102,22 @@ function onClickProfileMenu() {
         // console.log('profileSubTyping');
     };
     var startProfileSubTyping = setInterval(profileSubTyping, duration2);
+    
+    profileBtn.style.animation = 'name4 5s ease-in-out';
 }
-profileMenu.addEventListener('click', onClickProfileMenu);
 
 
-// MUSIC 메뉴 클릭 시 실행
-function onClickMusicMenu() {
+// PROFILE 메뉴 클릭 시 애니메이션 실행
+function clickProfileMenu() {
+    mainTyping2.style.animation = 'name 2s ease-in-out';
+    subTyping2.style.animation = 'name 3s ease-in-out';
+    profileBtn.style.animation = 'name4 5s ease-in-out';
+}
+profileMenu.addEventListener('click', clickProfileMenu);
+
+
+// MUSIC 화면에서 타이핑 실행
+function onMusicMenu() {
     var musicMainTyping = function () {
         if (e < str5.length) {
             mainTyping3.append(str5[e]);
@@ -114,12 +139,22 @@ function onClickMusicMenu() {
         // console.log('musicSubTyping');
     };
     var startMusicSubTyping = setInterval(musicSubTyping, duration2);   
+
+    musicBtn.style.animation = 'name4 5s ease-in-out';
 }
-musicMenu.addEventListener('click', onClickMusicMenu);
 
 
-// GALLERY 메뉴 클릭 시 실행
-function onClickGalleryMenu() {
+// MUSIC 메뉴 클릭 시 애니메이션 실행
+function clickMusicMenu() {
+    mainTyping3.style.animation = 'name 2s ease-in-out';
+    subTyping3.style.animation = 'name 3s ease-in-out';
+    musicBtn.style.animation = 'name4 5s ease-in-out';
+}
+musicMenu.addEventListener('click', clickMusicMenu);
+
+
+// GALLERY 화면에서 타이핑 실행
+function onGalleryMenu() {
     var galleryMainTyping = function () {
         if (g < str7.length) {
             mainTyping4.append(str7[g]);
@@ -141,12 +176,22 @@ function onClickGalleryMenu() {
         // console.log('gallerySubTyping');
     };
     var startGallerySubTyping = setInterval(gallerySubTyping, duration2);
+
+    galleryBtn.style.animation = 'name4 5s ease-in-out';
 }
-galleryMenu.addEventListener('click', onClickGalleryMenu);
 
 
-// VIDEO 메뉴 클릭 시 실행
-function onClickVideoMenu() {
+// GALLERY 메뉴 클릭 시 애니메이션 실행
+function clickGalleryMenu() {
+    mainTyping4.style.animation = 'name 2s ease-in-out';
+    subTyping4.style.animation = 'name 3s ease-in-out';
+    galleryBtn.style.animation = 'name4 5s ease-in-out';
+}
+galleryMenu.addEventListener('click', clickGalleryMenu);
+
+
+// VIDEO 화면에서 타이핑 실행
+function onVideoMenu() {
     var videoMainTyping = function () {
         if (i < str9.length) {
             mainTyping5.append(str9[i]);
@@ -168,14 +213,42 @@ function onClickVideoMenu() {
         // console.log('videoSubTyping');
     };
     var startVideoSubTyping = setInterval(videoSubTyping, duration2);  
+
+    videoBtn.style.animation = 'name4 5s ease-in-out';
 }
-videoMenu.addEventListener('click', onClickVideoMenu);
+
+
+// VIDEO 메뉴 클릭 시 애니메이션 실행
+function clickVideoMenu() {
+    mainTyping5.style.animation = 'name 2s ease-in-out';
+    subTyping5.style.animation = 'name 3s ease-in-out';
+    videoBtn.style.animation = 'name4 5s ease-in-out';
+}
+videoMenu.addEventListener('click', clickVideoMenu);
+
+
+// 메인 페이지 애니메이션
+var mainLogo = document.getElementById('logo');
+var mainMenu = document.getElementById('menuBtn');
+var footerCopyright = document.getElementById('copyright');
+var footerSNS = document.getElementById('sns');
+
+function appear(){
+    mainLogo.style.animation = 'name 1s ease-in-out';
+    mainMenu.style.animation = 'name 1s ease-in-out';
+    footerCopyright.style.animation = 'name2 1.5s ease-in-out';
+    footerSNS.style.animation = 'name3 1.5s ease-in-out';
+    mainTyping1.style.animation = 'name 2s ease-in-out';
+    subTyping1.style.animation = 'name 3s ease-in-out'
+}
 
 
 // 페이지 로드 시 실행
 window.addEventListener('load', function() {
-    onClickProfileMenu();
-    onClickMusicMenu();
-    onClickGalleryMenu();
-    onClickVideoMenu();
+    appear();
+    onHomeMenu();
+    onProfileMenu();
+    onMusicMenu();
+    onGalleryMenu();
+    onVideoMenu();
 }, false);

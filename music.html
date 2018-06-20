@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="uft-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <title>MUSIC - PIECE OF CHEEZE</title>
+        <link rel="stylesheet" href="./css/reset.css"/>
+        <link rel="stylesheet" href="./css/music.css"/>
+        <link rel="shortcut icon" href="./img/cheezeFavicon.ico"/>
+    </head>
+    <body>
+        <div id="accordion-menu" class="accordion-menu">
+            <!-- 2016 -->
+            <div id="accordion-menu-1" class="menu-item">
+                <figure><img src="./img/2016.jpg" width="1024" height="1024" alt="CHEEZE ALBUM"></figure>
+                <a href="#"><span class="year">2016</span></a>
+                <!-- 2016 Album -->
+                <div clss="content">
+                    <div class="album">
+                        <div class="num1" onclick="goPage1()">
+                            <img src="./img/moodIndigoAlbum.png" width="250" height="177" alt="CHEEZE ALBUM">
+                        </div>
+                        <div class="num2" onclick="goPage2()">
+                            <img src="./img/qAlbum.png" width="250" height="177" alt="CHEEZE ALBUM">
+                        </div>
+                    </div>
+                </div>
+                <!-- Close Button -->
+                <b id="btn1" class="btn-close"><span>&nbsp;</span></b>
+            </div>
+            <!-- 2017 -->
+            <div id="accordion-menu-2" class="menu-item">
+                <figure><img src="./img/2017.jpg" width="1024" height="1024" alt="CHEEZE ALBUM"></figure>
+                <a href="#"><span class="year">2017</span></a>
+                <!-- 2017 Album -->
+                <div clss="content">
+                    <div class="album">
+                        <div class="num3" onclick="goPage3()">
+                            <img src="./img/byeAlbum.png" width="250" height="177" alt="CHEEZE ALBUM">
+                        </div>
+                        <div class="num4" onclick="goPage4()">
+                            <img src="./img/beThereAlbum.png" width="250" height="177" alt="CHEEZE ALBUM">
+                        </div>
+                        <div class="num5" onclick="goPage5()">
+                            <img src="./img/shortFilm1Album.png" width="250" height="177" alt="CHEEZE ALBUM">
+                        </div>
+                    </div>
+                </div>
+                <!-- Close Button -->
+                <b id="btn2" class="btn-close"><span>&nbsp;</span></b>
+            </div>
+            <!-- 2018 -->
+            <div id="accordion-menu-3" class="menu-item">
+                <figure><img src="./img/2018.jpg" width="1024" height="1024" alt="CHEEZE ALBUM"></figure>
+                <a href="#"><span class="year">2018</span></a>
+                <!-- 2018 Album -->
+                <div clss="content">
+                    <div class="album">
+                        <div class="num1" onclick="goPage6()">
+                            <img src="./img/shortFilm2Album.png" width="250" height="177" alt="CHEEZE ALBUM">
+                        </div>
+                        <div class="num2" onclick="goPage7()">
+                            <img src="./img/shortFilm3Album.png" width="250" height="177" alt="CHEEZE ALBUM">
+                        </div>
+                    </div>
+                </div>
+                <!-- Close Button -->
+                <b id="btn3" class="btn-close"><span>&nbsp;</span></b>
+            </div>
+            <!-- Close Button -->
+            <b class="close" onclick="goBack()"><span>&nbsp;</span></b>
+        </div>
+        <!-- Script -->
+        <script src="./js/music.js"></script>
+    </body>
+</html>
