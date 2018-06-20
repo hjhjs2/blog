@@ -124,16 +124,16 @@ function goPage4() {
 }
 
 function goPage5() {
-    location.href="./shortFilm1.html";
+    location.href="./shortfilm1.html";
     console.log('start');
 }
 
 function goPage6() {
-    location.href="./shortFilm2.html";
+    location.href="./shortfilm2.html";
     console.log('start');
 }
 
 function goPage7() {
-    location.href="./shortFilm3.html";
+    location.href="./shortfilm3.html";
     console.log('start');
 }
