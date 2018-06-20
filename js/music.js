@@ -3,7 +3,7 @@ var $menu = document.getElementById('accordion-menu');
 var $menuItems = $menu.querySelectorAll('.menu-item');
 var $menuItemsEl = $menu.querySelectorAll('a');
 var $menuItemName = document.getElementsByClassName('year');
-// console.log($menuItemsEl);
+
 var _max = $menuItems.length;
 var _isOpen = false;
 var _isAni = false;
@@ -102,7 +102,7 @@ function goBack() {
 }
 
 
-// 페이지 이동
+// 페이지 이동 
 function goPage1() {
     location.href="./moodIndigo.html";
     console.log('start');
